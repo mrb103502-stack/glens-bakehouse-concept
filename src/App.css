@@ -33,7 +33,9 @@ img {
   background: #f6efe7;
 }
 
-/* TOP NOTICE */
+/* =========================
+   TOP NOTICE
+========================= */
 
 .demo-ribbon {
   padding: 10px 5%;
@@ -45,7 +47,9 @@ img {
   letter-spacing: 2px;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 
 .topbar {
   min-height: 84px;
@@ -154,7 +158,9 @@ img {
   display: none;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .new-hero {
   min-height: calc(100vh - 112px);
@@ -297,7 +303,9 @@ img {
   font-size: 21px;
 }
 
-/* TICKER */
+/* =========================
+   TICKER
+========================= */
 
 .brand-ticker {
   padding: 17px 4%;
@@ -317,7 +325,9 @@ img {
   color: #f0b5a8;
 }
 
-/* MENU */
+/* =========================
+   MENU
+========================= */
 
 .eat-section {
   padding: 110px 7%;
@@ -458,7 +468,9 @@ img {
   font-weight: 800;
 }
 
-/* INTERIOR / STORY */
+/* =========================
+   INTERIOR / STORY
+========================= */
 
 .branch-story {
   display: grid;
@@ -553,7 +565,9 @@ img {
   line-height: 1.6;
 }
 
-/* COUNTER FEATURE */
+/* =========================
+   COUNTER FEATURE
+========================= */
 
 .night-feature {
   min-height: 620px;
@@ -612,7 +626,9 @@ img {
   font-weight: 800;
 }
 
-/* WHY GLENS */
+/* =========================
+   WHY GLENS
+========================= */
 
 .why-glens {
   padding: 100px 7%;
@@ -668,7 +684,9 @@ img {
   line-height: 1.7;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .branch-contact {
   padding: 90px 7%;
@@ -744,7 +762,9 @@ img {
   object-fit: cover;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 .new-footer {
   padding: 28px 7%;
@@ -787,7 +807,9 @@ img {
   font-weight: 800;
 }
 
-/* TABLET */
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 1050px) {
   .desktop-nav {
@@ -885,7 +907,9 @@ img {
   }
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 760px) {
   .demo-ribbon {
@@ -918,22 +942,79 @@ img {
     padding-right: 5%;
   }
 
-  .hero-left {
-    padding: 62px 5% 50px;
+  /* MOBILE HERO REORDER */
+
+  .new-hero {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
   }
 
-  .hero-left h1 {
-    font-size: clamp(52px, 15vw, 76px);
+  .hero-left {
+    display: contents;
+  }
+
+  .hero-left > .tiny-label {
+    order: 1;
+    margin: 0;
+    padding: 42px 5% 14px;
+    text-align: center;
+  }
+
+  .hero-left > h1 {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 5%;
+    text-align: center;
+    font-size: clamp(44px, 12vw, 60px);
+    line-height: 0.94;
     letter-spacing: -2px;
   }
 
-  .hero-intro {
+  .hero-left > .hero-intro {
+    order: 1;
+    max-width: 420px;
+    margin: 22px auto 0;
+    padding: 0 5%;
+    text-align: center;
     font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .hero-left > .hero-buttons-new {
+    order: 1;
+    width: 100%;
+    margin-top: 24px;
+    padding: 0 5% 28px;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .filled-button {
+    padding: 13px 18px;
+  }
+
+  .hero-visual-new {
+    order: 2;
+    min-height: 470px;
   }
 
   .hero-quick-info {
+    order: 3;
+    width: 100%;
+    margin-top: 0;
+    padding: 24px 5% 28px;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
+    background: #f6efe7;
+    border-top: 1px solid rgba(64, 41, 30, 0.12);
+  }
+
+  .hero-quick-info div {
+    align-items: center;
+    text-align: center;
   }
 
   .hero-quick-info strong {
@@ -941,14 +1022,12 @@ img {
     line-height: 1.4;
   }
 
-  .hero-visual-new {
-    min-height: 520px;
-  }
-
   .photo-stamp {
     right: 16px;
     bottom: 16px;
   }
+
+  /* MENU */
 
   .eat-section {
     padding: 72px 5%;
@@ -970,6 +1049,8 @@ img {
     height: 250px;
   }
 
+  /* INTERIOR */
+
   .branch-photo-large {
     min-height: 520px;
   }
@@ -977,6 +1058,8 @@ img {
   .branch-story-copy {
     padding: 70px 5%;
   }
+
+  /* COUNTER */
 
   .night-feature {
     min-height: 520px;
@@ -990,9 +1073,17 @@ img {
     font-size: 52px;
   }
 
+  /* WHY GLENS */
+
   .why-glens {
     padding: 75px 5%;
   }
+
+  .why-intro {
+    max-width: 100%;
+  }
+
+  /* CONTACT */
 
   .branch-contact {
     padding: 75px 5%;
@@ -1001,6 +1092,8 @@ img {
   .contact-side img {
     max-height: none;
   }
+
+  /* FOOTER */
 
   .new-footer {
     padding: 28px 5%;
