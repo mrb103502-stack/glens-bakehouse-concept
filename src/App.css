@@ -942,7 +942,7 @@ img {
     padding-right: 5%;
   }
 
-  /* MOBILE HERO REORDER */
+  /* MOBILE HERO */
 
   .new-hero {
     min-height: auto;
@@ -1057,6 +1057,21 @@ img {
 
   .branch-story-copy {
     padding: 70px 5%;
+  }
+
+  /* IMPORTANT:
+     FULL FILM NAGAR EXTERIOR IMAGE ON MOBILE */
+
+  .branch-story-reverse .branch-photo-large {
+    min-height: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  .branch-story-reverse .branch-photo-large img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   /* COUNTER */
